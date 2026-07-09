@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamim Portfolio</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<script>
+
+function toggleMenu() {
+    document
+        .getElementById("mobileMenu")
+        .classList.toggle("active");
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menu = document.getElementById('mobileMenu');
+    document.querySelectorAll('.menu a').forEach(function(link){
+        link.addEventListener('click', function(e){
+            const href = this.getAttribute('href');
+            if (!href) return;
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href === '#' ? 'body' : href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                // close mobile menu if open
+                if (menu && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                }
+            }
+        });
+    });
+});
+
+</script>
+
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+        <div class="container">
+
+            <nav class="navbar">
+
+                <div class="logo">
+                    <h2>Shamim</h2>
+                </div>
+
+                <div class="menu-toggle" onclick="toggleMenu()">
+                 ☰
+                </div>
+
+                    <ul class="menu" id="mobileMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    </ul>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-wrapper">
+
+            <div class="hero-content">
+
+                <h1>Hi, I'm Shamim</h1>
+
+                <h2>UI/UX Designer</h2>
+
+                <p>
+                    I create clean, user-friendly and modern digital
+                    experiences that help businesses grow and users
+                    achieve their goals.
+                </p>
+
+                <div class="hero-btn">
+                    <a href="#" class="btn-primary">View Work</a>
+                    <a href="#" class="btn-secondary">Contact Me</a>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <img src="hero-illustration.svg" alt="Hero illustration">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Services -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>My Services</h2>
+
+                <p>
+                    I help businesses create user-friendly and visually
+                    appealing digital experiences.
+                </p>
+
+            </div>
+
+            <div class="service-container">
+
+                <div class="service-card">
+
+                    <div class="icon">📱</div>
+
+                    <h3>App Design</h3>
+
+                    <p>
+                        Designing intuitive mobile applications that combine aesthetics,
+                        usability and seamless user experiences.
+                    </p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <div class="icon">💻</div>
+
+                    <h3>Web Design</h3>
+
+                    <p>
+                        Creating responsive and engaging websites that help businesses
+                        communicate effectively.
+                    </p>
+
+                </div>
+
+                <div class="service-card">
+
+                    <div class="icon">📊</div>
+
+                    <h3>SaaS Design</h3>
+
+                    <p>
+                        Building modern SaaS products with clean dashboards,
+                        efficient workflows and user-centered experiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <div class="container about-wrapper">
+
+            <div class="about-image">
+                <img src="about-illustration.svg" alt="Tree and flower illustration">
+            </div>
+
+            <div class="about-content">
+
+                <h2>About Me</h2>
+
+                <p>
+                    I'm a passionate UI/UX Designer focused on creating
+                    modern and user-friendly digital experiences.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section class="skills" id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Skills & Tools</h2>
+
+                <p>
+                    Tools and technologies I use to design modern digital products.
+                </p>
+
+            </div>
+
+            <div class="skill-grid">
+
+                <div class="skill-card">UI Design</div>
+
+                <div class="skill-card">UX Research</div>
+
+                <div class="skill-card">Wireframing</div>
+
+                <div class="skill-card">Prototyping</div>
+
+                <div class="skill-card">Design Systems</div>
+
+                <div class="skill-card">Responsive Design</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+
+    <section class="projects" id="projects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Featured Projects</h2>
+
+                <p>
+                    A selection of my recent design work and case studies.
+                </p>
+
+            </div>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+
+                    <img src="project1.svg" alt="Project 1 Thumbnail">
+
+                    <h3>E-commerce App</h3>
+
+                    <p>Mobile App Design</p>
+
+                </div>
+
+                <div class="project-card">
+
+                    <img src="project2.svg" alt="Project 2 Thumbnail">
+
+                    <h3>SaaS Dashboard</h3>
+
+                    <p>Web Application Design</p>
+
+                </div>
+
+                <div class="project-card">
+
+                    <img src="project3.svg" alt="Project 3 Thumbnail">
+
+                    <h3>Portfolio Website</h3>
+
+                    <p>Responsive Website Design</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Let's Work Together</h2>
+
+                <p>
+                    Have a project in mind? Feel free to reach out.
+                </p>
+
+            </div>
+
+            <form class="contact-form">
+
+                <input type="text" placeholder="Your Name">
+
+                <input type="email" placeholder="Your Email">
+
+                <textarea rows="6" placeholder="Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="container">
+
+            <!-- <h3>Shamim</h3> -->
+
+            <p>UI/UX Designer</p>
+
+            <p>© 2026 All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
