@@ -295,15 +295,13 @@ header{
    CONTACT
 ========================= */
 
-.contact{
-    background:#f8f9fb;
-    padding:100px 0;
-}
-
 .contact-form{
     max-width:700px;
     margin:auto;
-
+    background:#fff;
+    padding:40px;
+    border-radius:24px;
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
     display:flex;
     flex-direction:column;
     gap:20px;
@@ -311,19 +309,50 @@ header{
 
 .contact-form input,
 .contact-form textarea{
-    padding:16px;
-    border:1px solid #ddd;
-    border-radius:10px;
+    width:100%;
+    padding:18px 20px;
+    border:1px solid #dde2ec;
+    border-radius:14px;
     font-size:16px;
+    background:#fbfcff;
+    transition:.25s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#1664AF;
+    box-shadow:0 0 0 4px rgba(22,100,175,.08);
+}
+
+.contact-form textarea{
+    min-height:180px;
+    resize:vertical;
 }
 
 .contact-form button{
-    border:none;
+    width:100%;
     background:#1664AF;
     color:#fff;
-    padding:16px;
-    border-radius:10px;
+    border:none;
+    padding:18px;
+    border-radius:14px;
     cursor:pointer;
+    font-size:16px;
+    font-weight:700;
+    transition:.2s;
+}
+
+.contact-form button:hover{
+    transform:translateY(-1px);
+    opacity:.95;
+}
+
+.contact-form .form-message{
+    width:100%;
+    border:1px solid #c8f4d6;
+    background:#e6ffed;
+    color:#064e19;
 }
 
 /* =========================
@@ -334,7 +363,7 @@ footer{
     background:#111;
     color:#fff;
     text-align:center;
-    padding:50px 0;
+    padding:32px 0;
 }
 
 footer h3{
@@ -422,7 +451,7 @@ footer h3{
     .skills,
     .projects,
     .contact{
-        padding:70px 0;
+        padding:60px 0;
     }
 
 }
