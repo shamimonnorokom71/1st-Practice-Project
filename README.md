@@ -16,14 +16,10 @@ Personal portfolio website showcasing my UI/UX design work, projects and service
 
 ## Built With
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - Responsive Design
 - GitHub Pages
-
-## Screenshots
-
-(Add screenshot here)
 
 ## Contact
 
