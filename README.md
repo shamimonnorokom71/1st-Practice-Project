@@ -23,4 +23,4 @@ Personal portfolio website showcasing my UI/UX design work, projects and service
 
 ## Contact
 
-Email: your-email@example.com
+Email: shamim.onnorokom71@gmail.com
